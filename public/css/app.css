@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #e4effa;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.left-top {
+  display: flex;
+  gap: 30px;
+  height: 300px;
+}
+
+.left-bottom {
+  display: flex;
+  gap: 30px;
+  height: 300px;
+}
+
+.right {
+  width: 350px;
+}
+
+.purpleContainer,
+.grayContainer,
+.whiteContainer,
+.blackContainer,
+.whiteLongContainer {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.purpleContainer {
+  flex: 2;
+  background: linear-gradient(135deg, #7541c8 0%, #8b5fd4 100%);
+  color: #ffffff;
+  position: relative;
+}
+
+.grayContainer {
+  flex: 1;
+  background-color: #48556a;
+  color: #ffffff;
+}
+
+.whiteContainer {
+  flex: 1;
+  background-color: #ffffff;
+  color: #48556a;
+}
+
+.blackContainer {
+  flex: 2;
+  background-color: #19212e;
+  color: #ffffff;
+}
+
+.whiteLongContainer {
+  height: 100%;
+  background-color: #ffffff;
+  color: #48556a;
+}
+
+.image-name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+.image-name img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.image-name .name p:first-child {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+.image-name .name p:last-child {
+  font-size: 11px;
+  opacity: 0.5;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.comment {
+  margin-bottom: 16px;
+}
+.comment p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.lessComment p {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.7;
+}
+
+@media (max-width: 426px) {
+  .container {
+    flex-direction: column;
+  }
+  .right {
+    width: 100%;
+  }
+  .left-top,
+  .left-bottom {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

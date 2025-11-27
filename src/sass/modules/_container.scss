@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $color-bg;
+  min-height: 100vh;
+  @include flex-center;
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.left-top {
+  display: flex;
+  gap: 30px;
+  height: 300px;
+}
+
+.left-bottom {
+  display: flex;
+  gap: 30px;
+  height: 300px;
+}
+
+.right {
+  width: 350px;
+}
+
+.purpleContainer,
+.grayContainer,
+.whiteContainer,
+.blackContainer,
+.whiteLongContainer {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.purpleContainer {
+  flex: 2;
+  background: linear-gradient(135deg, $color-purple 0%, $color-purple-light 100%);
+  color: $color-white;
+  position: relative;
+}
+
+.grayContainer {
+  flex: 1;
+  background-color: $color-gray;
+  color: $color-white;
+}
+
+.whiteContainer {
+  flex: 1;
+  background-color: $color-white;
+  color: $color-gray;
+}
+
+.blackContainer {
+  flex: 2;
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.whiteLongContainer {
+  height: 100%;
+  background-color: $color-white;
+  color: $color-gray;
+}
+
+.image-name {
+  @include flex-align-center;
+  gap: 15px;
+  margin-bottom: 18px;
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .name {
+    p:first-child {
+      font-size: 13px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    p:last-child {
+      font-size: 11px;
+      opacity: 0.5;
+      margin: 0;
+      margin-top: 2px;
+    }
+  }
+}
+
+.comment {
+  margin-bottom: 16px;
+
+  p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.lessComment {
+  p {
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0.7;
+  }
+}
+
+//! Responsive
+
+@media (max-width: 426px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .left-top,
+  .left-bottom {
+    flex-direction: column;
+    height: auto;
+  }
+}
