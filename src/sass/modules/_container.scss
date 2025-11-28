@@ -49,13 +49,22 @@ body {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .purpleContainer {
   flex: 2;
-  background: linear-gradient(135deg, $color-purple 0%, $color-purple-light 100%);
+  background: $color-purple;
   color: $color-white;
   position: relative;
+  .quote{
+    position: absolute;
+    right: 110px;
+    top: 0;
+    img{
+      height: 150px;
+    }
+  }
 }
 
 .grayContainer {
@@ -135,6 +144,14 @@ body {
 @media (max-width: 426px) {
   .container {
     flex-direction: column;
+    .purpleContainer{
+      .quote{
+        right: 30px;
+        img{
+          height: 120px;
+        }
+      }
+    }
   }
 
   .right {
